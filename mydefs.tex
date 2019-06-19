@@ -1,0 +1,48 @@
+\usepackage{paralist}% 方便好用的压缩列表
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,includehead,includefoot]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{extarrows}
+\usepackage[colorlinks]{hyperref}
+\usepackage{textcomp}
+\usepackage{pbox}
+\usepackage{graphicx}
+\usepackage{subfigure}
+% 自定义数学公式
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\sbrace}[1]{\left(#1\right)}
+\newcommand{\mbrace}[1]{\left[#1\right]}
+\newcommand{\bbrace}[1]{\left\{#1\right\}}
+\newcommand{\eval}[2]{\left.{#1}\right|_{#2}}
+\newcommand{\VecNorm}[1]{\left\Vert#1\right\Vert}% 向量模
+\newcommand{\up}[1]{^{(#1)}}
+\newcommand{\TT}{^\top}% 矩阵转置
+\newcommand{\OO}{\ensuremath{\mathbb O}}% n 阶展开多项式余项
+\newcommand{\OC}{\ensuremath{\mathcal O}}% 算法复杂度
+\newcommand{\lfrac}[2]{#1/#2}
+\newcommand{\DIF}[1]{\ensuremath{\frac{\partial}{\partial #1}}}
+\newcommand{\DIFF}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand{\cd}[1]{\,\texttt{#1}\,}
+\newcommand{\dbrace}[1]{
+  \Bigl\{
+    #1
+  \Bigr\} 
+}
+\newcommand{\pt}{\partial}
+\newcommand{\MD}{\mathfrak{D}}
+
+\newcommand{\refeqn}[1]{Eq.(\ref{#1})}
+\newcommand{\refsec}[1]{Section \ref{#1}~}
+\newcommand{\reffig}[1]{Figure \ref{#1}~}
+\newcommand{\reftab}[1]{Table \ref{#1}~}
+
+\newtheorem{cbrule}{合并规则}
+
+\newenvironment{aeq}{
+\begin{equation}
+\begin{aligned}
+}{
+\end{aligned}
+\end{equation}
+}

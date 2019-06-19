@@ -1,3 +1,52 @@
 {
-    "python.pythonPath": "/anaconda3/bin/python"
+    "python.pythonPath": "/anaconda3/bin/python",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.brf": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.out": true,
+        "**/*.log": true,
+        "**/*.toc": true,
+        "**/*.xdv": true,
+        "**/*.gz": true,
+        "**/*.thm": true,
+        "**/*.svg": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*(busy)": true,
+        "**/*.lot": true,
+        "**/*.lof": true,
+        "**/*.loa": true,
+        "**/*.nav": true,
+        "**/*.snm": true,
+        "**/.-tmp": true
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ]
 }

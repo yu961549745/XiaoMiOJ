@@ -1,0 +1,34 @@
+\documentclass{ctexart}
+\input{../mydefs.tex}
+
+\renewcommand{\sf}[1]{\sum_{n=1}^N\sbrace{#1}}
+\newcommand{\sg}[1]{\sum_{k=1}^n\sbrace{#1}}
+
+\begin{document}
+\begin{aeq}
+f(N)=\sf{g(n)}=\sf{\sg{\floor{\lg k}+1}}
+\end{aeq}
+令 $m=\floor{\lg k},M=\floor{\lg n}$, 我们有
+\begin{aeq}
+g(n)&=\sum_{m=0}^{M-1}{(m+1)(10^{m+1}-10^m)}+\sum_{k=10^{M}}^n\sbrace{M+1} \\
+&=h(n;M)
+\end{aeq}
+在$M$取值相同时, 
+\begin{aeq}
+H(a,b,M)=\sum_{n=a}^b{h(n;M)}
+\end{aeq}
+令 $M=\floor{\lg n}, L=\floor{\lg N}$, 我们有 
+\begin{aeq}
+f(N)&=\sf{h(n;M)} \\
+&=\sum_{M=0}^{L-1}{\sum_{n=10^M}^{10^{M+1}-1}{h(n;M)}}
++\sum_{n=10^{L}}^N{h(n;L)} \\ 
+&=\sum_{M=0}^{L-1}{H(10^M,10^{M+1}-1,M)}+H(10^{L},N,L) \\
+&=F(N,L)
+\end{aeq}
+
+要求
+\begin{aeq}
+    F(N^*,L(N^*))< K \le F(N^*+1,L(N^*+1))
+\end{aeq}
+
+\end{document}
